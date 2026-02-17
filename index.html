@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>LeuvBot — Actionable trading insights</title>
   <meta name="description" content="We analyze indicators, fundamentals, and news using statistics and AI to provide easily actionable trading insights." />
+
+  <!-- Favicons -->
   <link rel="icon" href="/assets/tab16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/assets/tab32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/tab180.png" sizes="180x180">
+
   <style>
     :root{
       --bg:#070A12;
@@ -23,6 +26,9 @@
 
       --radius: 22px;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
+
+      /* spacing between sections */
+      --section-gap: 56px;
     }
 
     *{ box-sizing:border-box; }
@@ -185,7 +191,7 @@
 
     /* Scroll arrow / section nav */
     .scrollnav{
-      margin-top: 18px;
+      margin-top: 26px;
       display:flex;
       flex-wrap:wrap;
       gap: 10px;
@@ -213,8 +219,14 @@
     }
 
     .section{
-      margin-top: 14px;
+      margin-top: var(--section-gap);
     }
+
+    /* Give anchor targets breathing room when scrolled into view */
+    #product, #vision, #team{
+      scroll-margin-top: 28px;
+    }
+
     .section h2{
       margin: 0 0 10px;
       font-size: 16px;
@@ -265,7 +277,7 @@
     }
 
     footer{
-      margin-top: 18px;
+      margin-top: 22px;
       display:flex;
       justify-content: space-between;
       gap: 10px;
@@ -369,7 +381,7 @@
     </section>
 
     <!-- PRODUCT -->
-    <section class="card section" id="product" style="margin-top:14px;">
+    <section class="card section" id="product">
       <h2>Product</h2>
       <p>
         Many investment opportunities go unnoticed because people don’t monitor the full spectrum of signals — and don’t have the time or tools to combine them.
@@ -393,7 +405,7 @@
         </div>
       </div>
 
-      <div class="scrollnav" style="margin-top:16px;">
+      <div class="scrollnav" style="margin-top:18px;">
         <a class="chip" href="#vision">
           <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -405,7 +417,7 @@
     </section>
 
     <!-- VISION -->
-    <section class="card section" id="vision" style="margin-top:14px;">
+    <section class="card section" id="vision">
       <h2>Vision</h2>
       <p>
         We believe stock market opportunities should be accessible to everyone — not only to those who rely on large banks or expensive tools.
@@ -414,12 +426,12 @@
 
       <div class="divider"></div>
 
-      <p>
+      <p style="margin-top: 10px;">
         Our long-term vision is to build an intelligent investing co-pilot that improves as markets evolve,
         through the intensive use of AI agents and advanced statistics — always focused on clarity, accountability, and actionability.
       </p>
 
-      <div class="scrollnav" style="margin-top:16px;">
+      <div class="scrollnav" style="margin-top:18px;">
         <a class="chip" href="#team">
           <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -431,7 +443,7 @@
     </section>
 
     <!-- TEAM -->
-    <section class="card section" id="team" style="margin-top:14px;">
+    <section class="card section" id="team">
       <h2>Team</h2>
       <p>
         We work remotely and meet in person a few times per year to align vision and plan execution.
@@ -445,26 +457,24 @@
             Built the foundational method that inspired LeuvBot. Owns the macro design of the trading strategy and the computing architecture behind the solution.
           </div>
         </div>
-      
+
         <div class="person">
           <div class="name">Roman Kralik</div>
           <div class="meta">Slovak · Statistician · M.Sc. AI Student · Python Developer · Solo Investor · Multi-Agent AI Strategist</div>
           <div class="bio">
-            Leads statistical modeling and experimentation, and drives the multi-agent AI strategy that adapts as markets evolve. Supports engineering execution and early talent & hiring foundations.
+            Leads statistical modeling and experimentation, and drives the multi-agent AI strategy that adapts as markets evolve. Supports engineering execution and early talent &amp; hiring foundations.
           </div>
         </div>
 
         <div class="person">
-  <div class="name">Laurens Bogaert</div>
-  <div class="meta">Belgian · Solo Investor · B.A. in Law & Taxation · M.Sc. in Law & Taxation · M.Sc. in Economics & Entrepreneurship</div>
-  <div class="bio">
-    Drives business foundations and positioning, with a focus on tax strategy, regulatory framing, and legal responsibility considerations. Brings market-structure insights to help translate how markets actually work into practical product decisions. Contributes to go-to-market, stakeholder communication, and public relations.
-  </div>
-</div>
-
+          <div class="name">Laurens Bogaert</div>
+          <div class="meta">Belgian · Solo Investor · B.A. in Law &amp; Taxation · M.Sc. in Law &amp; Taxation · M.Sc. in Economics &amp; Entrepreneurship</div>
+          <div class="bio">
+            Drives business foundations and positioning, with a focus on tax strategy, regulatory framing, and legal responsibility considerations. Brings market-structure insights to help translate how markets actually work into practical product decisions. Contributes to go-to-market, stakeholder communication, and public relations.
+          </div>
+        </div>
       </div>
-        
-        
+
       <div class="divider"></div>
 
       <div class="actions" style="margin-top:0;">
@@ -474,11 +484,12 @@
       </div>
 
       <div class="note">
-        Prefer email? Reach us at <a href="mailto:hello@leuvbot.com?subject=LeuvBot%20—%20Contact&body=Hi%20LeuvBot%20team,%0A%0A" style="color: rgba(255,255,255,.75);">hello@leuvbot.com</a>
+        Prefer email? Reach us at
+        <a href="mailto:hello@leuvbot.com?subject=LeuvBot%20—%20Contact&body=Hi%20LeuvBot%20team,%0A%0A">hello@leuvbot.com</a>
         <button class="copybtn" id="copyEmail" type="button">Copy email</button>
       </div>
 
-      <div class="scrollnav" style="margin-top:16px;">
+      <div class="scrollnav" style="margin-top:18px;">
         <a class="chip" href="#top">
           <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 19V7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -489,10 +500,21 @@
       </div>
     </section>
 
+    <!-- Footer (single, valid) -->
     <footer>
-      <div>© <span id="y"></span> LeuvBot</div>
-      <div>
-        <a href="#team">Team</a> · <a href="#vision">Vision</a> · <a href="#product">Product</a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img
+          src="/assets/Leuvbotlogo.png"
+          alt="LeuvBot"
+          style="height:20px; width:auto; opacity:.85;"
+          loading="lazy"
+        />
+        <div>© <span id="y"></span> LeuvBot</div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <a href="mailto:hello@leuvbot.com?subject=LeuvBot%20—%20Contact&body=Hi%20LeuvBot%20team,%0A%0A">hello@leuvbot.com</a>
+        <button class="copybtn" id="copyEmailFooter" type="button">Copy email</button>
       </div>
     </footer>
   </main>
@@ -514,34 +536,23 @@
       });
     });
 
-    // Copy email fallback
-    const copyBtn = document.getElementById('copyEmail');
-    copyBtn?.addEventListener('click', async () => {
-      const email = 'hello@leuvbot.com';
-      try {
-        await navigator.clipboard.writeText(email);
-        copyBtn.textContent = 'Copied!';
-        setTimeout(() => (copyBtn.textContent = 'Copy email'), 1200);
-      } catch (e) {
-        window.prompt('Copy this email:', email);
-      }
-    });
+    // Copy email fallback (both buttons if present)
+    function wireCopy(btnId){
+      const btn = document.getElementById(btnId);
+      btn?.addEventListener('click', async () => {
+        const email = 'hello@leuvbot.com';
+        try {
+          await navigator.clipboard.writeText(email);
+          const prev = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => (btn.textContent = prev), 1200);
+        } catch (e) {
+          window.prompt('Copy this email:', email);
+        }
+      });
+    }
+    wireCopy('copyEmail');
+    wireCopy('copyEmailFooter');
   </script>
 </body>
-<footer>
-  <div style="display:flex; align-items:center; gap:10px;">
-    <img
-      src="/assets/Leuvbotlogo.png"
-      alt="LeuvBot"
-      style="height:20px; width:auto; opacity:.85;"
-      loading="lazy"
-    />
-    <div>© <span id="y"></span> LeuvBot</div>
-  </div>
-
-  <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-    <a href="mailto:hello@leuvbot.com?subject=LeuvBot%20—%20Contact&body=Hi%20LeuvBot%20team,%0A%0A">hello@leuvbot.com</a>
-    <button class="copybtn" id="copyEmail" type="button">Copy email</button>
-  </div>
-</footer>
 </html>
